@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>All Documents</h1>
+    <form action="" method="post" novalidate>
+        {% if results %}
+        <ul>
+            {% for each_entry in results %}
+            <li>{{ each_entry }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <h3>No Documents Present in database</h3>
+        {% endif %}
+        <br>
+    </form>
+{% endblock %}
