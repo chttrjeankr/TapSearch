@@ -16,7 +16,7 @@ To provide input to the database which is to be indexed. The text field takes in
 
 ## `DATABASE`
 
-To view the an exhaustive list of `documents` indexed in the database.
+To view an exhaustive list of `documents` indexed in the database.
 
 ## `CLEAR`
 
