@@ -14,7 +14,6 @@ def index():
 def input_text():
     form = InputTextForm()
     if form.validate_on_submit():
-        print(form.text_in.raw_data)
         indexed = ts.processing(form.text_in.raw_data)
         if indexed:
             flash("Correctly indexed into database")
@@ -27,7 +26,6 @@ def search():
     form = SearchForm()
     if form.validate_on_submit():
         results = ts.searching(form.word.data, form.number_of_res.data)
-        # print(results)
         return render_template("results.html", title="Results", results=results)
     return render_template("search.html", title="Search", form=form)
 
